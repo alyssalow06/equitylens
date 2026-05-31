@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EquityLens — Financial reports, decoded.</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="EquityLens — Financial reports, decoded." />
+    <meta property="og:description" content="Upload any Bursa Malaysia quarterly report and see an interactive dashboard in seconds. Built by Alyssa Low." />
+    <meta property="og:type" content="website" />
+
+    <!-- Prevent dark-mode flash -->
+    <script>
+      if (localStorage.getItem('equitylens-dark') === 'true') {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

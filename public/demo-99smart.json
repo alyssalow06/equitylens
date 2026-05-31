@@ -1,0 +1,186 @@
+{
+  "company_name": "99 SPEED MART RETAIL HOLDINGS BERHAD",
+  "stock_code": "5326",
+  "registration_number": "202101012345 (1416161-X)",
+  "sector": "Consumer / Retail",
+  "reporting_period": "Q1 FY2026",
+  "period_end_date": "2026-03-31",
+  "financial_year_end": "31 December",
+  "report_type": "Q1",
+  "currency": "RM'000",
+
+  "executive_summary": "99 Speed Mart delivered record first-quarter revenue of RM3.07 billion, up 17.5% year-on-year, driven by 253 net new outlets and a richer non-essential product mix. Net profit rose 30.1% to RM188.6 million as gross margin expanded to 20.4% and energy-saving initiatives lowered operating costs. The Group declared a first interim dividend of 2.25 sen per share. Management remains confident on continued network expansion through FY2026.",
+
+  "income_statement": {
+    "current_period": {
+      "period": "Q1 FY2026",
+      "revenue": 3068353,
+      "cost_of_sales": 2442821,
+      "gross_profit": 625532,
+      "other_income": 15000,
+      "operating_expenses": 383174,
+      "finance_costs": 8000,
+      "profit_before_tax": 249358,
+      "income_tax": 60798,
+      "profit_after_tax": 188560,
+      "eps_sen": 2.24
+    },
+    "prior_year_period": {
+      "period": "Q1 FY2025",
+      "revenue": 2611565,
+      "cost_of_sales": 2090620,
+      "gross_profit": 520945,
+      "other_income": 12000,
+      "operating_expenses": 333994,
+      "finance_costs": 7000,
+      "profit_before_tax": 191951,
+      "income_tax": 47052,
+      "profit_after_tax": 144899,
+      "eps_sen": 1.72
+    },
+    "preceding_quarter": {
+      "period": "Q4 FY2025",
+      "revenue": 3005000,
+      "cost_of_sales": 2393000,
+      "gross_profit": 612000,
+      "other_income": 14000,
+      "operating_expenses": 378000,
+      "finance_costs": 7500,
+      "profit_before_tax": 240500,
+      "income_tax": 57000,
+      "profit_after_tax": 183500,
+      "eps_sen": 2.18
+    }
+  },
+
+  "yoy_changes": {
+    "revenue_pct": 17.5,
+    "gross_profit_pct": 20.1,
+    "profit_before_tax_pct": 29.9,
+    "profit_after_tax_pct": 30.1,
+    "eps_pct": 30.2
+  },
+
+  "qoq_changes": {
+    "revenue_pct": 2.1,
+    "gross_profit_pct": 2.2,
+    "profit_before_tax_pct": 3.7,
+    "profit_after_tax_pct": 2.8,
+    "eps_pct": 2.8
+  },
+
+  "margins": {
+    "current": {
+      "gp_margin_pct": 20.4,
+      "pbt_margin_pct": 8.1,
+      "pat_margin_pct": 6.1
+    },
+    "prior_year": {
+      "gp_margin_pct": 19.9,
+      "pbt_margin_pct": 7.3,
+      "pat_margin_pct": 5.5
+    },
+    "preceding_quarter": {
+      "gp_margin_pct": 20.4,
+      "pbt_margin_pct": 8.0,
+      "pat_margin_pct": 6.1
+    }
+  },
+
+  "balance_sheet": {
+    "total_assets": 4444822,
+    "non_current_assets": 2900000,
+    "current_assets": 1544822,
+    "total_equity": 1869414,
+    "total_liabilities": 2575408,
+    "cash_and_equivalents": 140983,
+    "total_borrowings": 112000,
+    "inventories": 1200000,
+    "trade_receivables": 60000,
+    "trade_payables": 900000,
+    "net_assets_per_share": 0.2225
+  },
+
+  "cash_flow": {
+    "operating": 250000,
+    "investing": -180000,
+    "financing": -50000,
+    "net_change": 20000,
+    "beginning_cash": 120983,
+    "ending_cash": 140983
+  },
+
+  "key_ratios": {
+    "current_ratio": 1.6,
+    "gearing_ratio": 0.06,
+    "roe_pct": 10.1,
+    "roa_pct": 4.2,
+    "debt_to_equity": 0.06
+  },
+
+  "dividend": {
+    "declared": true,
+    "amount_per_share_sen": 2.25,
+    "total_amount": "RM189.4 million",
+    "entitlement_date": "2026-06-02",
+    "payment_date": "2026-06-16",
+    "dividend_type": "First interim"
+  },
+
+  "operational_highlights": [
+    { "metric": "Total outlets", "current": "3,086", "prior": "2,833", "change": "+253" },
+    { "metric": "Transactions", "current": "141.1M", "prior": "119.6M", "change": "+18.0%" },
+    { "metric": "Average basket size", "current": "RM21.70", "prior": "RM21.10", "change": "+2.8%" },
+    { "metric": "New outlets opened (quarter)", "current": "253", "prior": "210", "change": "+43" }
+  ],
+
+  "segment_breakdown": [
+    { "segment": "Retail of consumer staples", "revenue": 3068353, "percentage": 100 }
+  ],
+
+  "management_commentary": {
+    "performance_review": "Revenue growth was led by an enlarged store network and a higher contribution from non-essential products, which carry better margins. Gross profit margin improved to 20.4% from 19.9% a year earlier. Energy-saving efficiencies and operating leverage lifted profit before tax by 29.9% year-on-year.",
+    "qoq_commentary": "Against the immediately preceding quarter, revenue rose 2.1% and profit after tax was up 2.8%, reflecting continued outlet additions despite a seasonally softer period.",
+    "prospects": "Management expects the outlet expansion programme to continue through FY2026, supported by the Group's distribution-centre network. Consumer demand for value retail is expected to remain resilient.",
+    "key_initiatives": [
+      "Open new outlets across underserved townships",
+      "Commission additional regional distribution centres",
+      "Expand energy-saving refrigeration retrofits",
+      "Grow the non-essential product assortment"
+    ]
+  },
+
+  "red_flags": [
+    "Prior year figures restated — supplier rebates reclassified from other income to a deduction against cost of sales.",
+    "Related party transactions exceeding RM60 million with director-related entities (rental and supply arrangements).",
+    "Contingent liability: RM11 million bank guarantee issued in favour of suppliers and utility providers."
+  ],
+
+  "highlights": [
+    "Record quarterly revenue of RM3.07 billion, up 17.5% YoY.",
+    "PAT grew 30.1% YoY to RM188.6 million on improved product mix and energy efficiencies.",
+    "Gross margin expanded 0.5pp YoY to 20.4%.",
+    "First interim dividend of 2.25 sen per share declared.",
+    "Store network expanded by 253 outlets YoY to 3,086 stores."
+  ],
+
+  "ipo_proceeds_utilization": {
+    "applicable": true,
+    "total_raised": "RM2,360 million",
+    "utilized": "RM1,180 million",
+    "balance": "RM1,180 million",
+    "details": [
+      { "purpose": "New outlet expansion", "budget": "RM900M", "utilized": "RM520M", "percentage": 58 },
+      { "purpose": "New distribution centres", "budget": "RM700M", "utilized": "RM410M", "percentage": 59 },
+      { "purpose": "Working capital", "budget": "RM560M", "utilized": "RM250M", "percentage": 45 },
+      { "purpose": "Listing expenses", "budget": "RM200M", "utilized": "RM200M", "percentage": 100 }
+    ]
+  },
+
+  "data_gaps": [
+    "Segment-level profit margins not disclosed.",
+    "Same-store sales growth (SSSG) not provided.",
+    "Forward revenue or earnings guidance not given.",
+    "Peer comparison requires external market data."
+  ]
+}
