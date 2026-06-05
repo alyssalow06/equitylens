@@ -175,7 +175,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'No text provided' })
   }
 
-  text = text.slice(0, 60000)
+  text = text.slice(0, 20000)
 
   try {
     const response = await fetch('https://api.anthropic.com/v1/messages', {
@@ -186,7 +186,7 @@ export default async function handler(req, res) {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-6',
+        model: 'claude-haiku-4-5-20251001',
         max_tokens: 8192,
         system: SYSTEM_PROMPT,
         messages: [
