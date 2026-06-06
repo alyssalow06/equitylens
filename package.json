@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "pdfjs-dist": "^5",
+    "pdfjs-dist": "^3.11.174",
     "react": "^19",
     "react-dom": "^19",
     "recharts": "^2.12"

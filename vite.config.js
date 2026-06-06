@@ -5,6 +5,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    target: 'safari13',
+    target: ['es2015', 'safari11'],
   },
 })
