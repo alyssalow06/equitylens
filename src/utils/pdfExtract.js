@@ -1,3 +1,12 @@
+function readFileAsArrayBuffer(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = () => resolve(reader.result)
+    reader.onerror = () => reject(reader.error)
+    reader.readAsArrayBuffer(file)
+  })
+}
+
 export async function extractMultiplePDFs(files) {
   const pdfjsLib = await import('pdfjs-dist')
   pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
@@ -8,7 +17,7 @@ export async function extractMultiplePDFs(files) {
   let fullText = ''
 
   for (const file of files) {
-    const arrayBuffer = await file.arrayBuffer()
+    const arrayBuffer = await readFileAsArrayBuffer(file)
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise
     let fileText = ''
 
