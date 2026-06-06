@@ -12,10 +12,11 @@ const TABS = ['All', 'Snapshot', 'P&L', 'Margins', 'Balance Sheet', 'Cash Flow',
 
 function fmtRM(n) {
   if (n == null) return 'N/A'
-  if (typeof n !== 'number') return String(n)
-  if (Math.abs(n) >= 1000000) return `RM${(n / 1000000).toFixed(2)}B`
-  if (Math.abs(n) >= 1000) return `RM${(n / 1000).toFixed(0)}M`
-  return `RM${n.toFixed(0)}K`
+  const num = typeof n === 'number' ? n : parseFloat(n)
+  if (isNaN(num)) return String(n)
+  if (Math.abs(num) >= 1000000) return `RM${(num / 1000000).toFixed(2)}B`
+  if (Math.abs(num) >= 1000) return `RM${(num / 1000).toFixed(0)}M`
+  return `RM${num.toFixed(0)}K`
 }
 
 function fmtNum(n) {
@@ -53,7 +54,7 @@ function Logo() {
 
 function TrendBadge({ value, suffix = '%' }) {
   if (value == null) return null
-  const pos = value >= 0
+  const pos = parseFloat(value) >= 0
   return (
     <span
       className={`inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full font-semibold text-xs ${
@@ -62,7 +63,7 @@ function TrendBadge({ value, suffix = '%' }) {
           : 'text-red-700 bg-red-50 dark:text-red-300 dark:bg-red-950'
       }`}
     >
-      {pos ? '▲' : '▼'} {Math.abs(value).toFixed(1)}{suffix}
+      {pos ? '▲' : '▼'} {Math.abs(parseFloat(value) || 0).toFixed(1)}{suffix}
     </span>
   )
 }
@@ -278,7 +279,7 @@ function QoQTable({ result }) {
                     {diff != null ? (diff > 0 ? '+' : '') + fmtNum(diff) : '—'}
                   </td>
                   <td className={`py-2 pl-3 text-right tabular-nums font-semibold ${color}`}>
-                    {pct != null ? (pct > 0 ? '+' : '') + pct.toFixed(1) + '%' : '—'}
+                    {pct != null ? (pct > 0 ? '+' : '') + (parseFloat(pct) || 0).toFixed(1) + '%' : '—'}
                   </td>
                 </tr>
               )
@@ -334,7 +335,7 @@ function MarginsSection({ result, dark }) {
           <div key={label} className="text-center">
             <p className="text-xs text-slate-500 dark:text-slate-400">{label}</p>
             <p className="text-2xl font-bold mt-0.5" style={{ color }}>
-              {val != null ? `${val.toFixed(1)}%` : 'N/A'}
+              {val != null ? `${(parseFloat(val) || 0).toFixed(1)}%` : 'N/A'}
             </p>
             {delta != null && <TrendBadge value={delta} suffix="pp" />}
           </div>
@@ -364,7 +365,7 @@ function BalanceSheetSection({ result, dark }) {
         <MetricCard label="Total Borrowings" value={fmtRM(bs.total_borrowings)} className="p-3" />
         <MetricCard
           label="NTA / Share"
-          value={bs.net_assets_per_share != null ? `RM${bs.net_assets_per_share.toFixed(4)}` : 'N/A'}
+          value={bs.net_assets_per_share != null ? `RM${(parseFloat(bs.net_assets_per_share) || 0).toFixed(4)}` : 'N/A'}
           className="p-3"
         />
       </div>
@@ -429,7 +430,7 @@ function KeyMetricsSection({ result }) {
         <MetricCard label="Gearing" value={kr.gearing_ratio != null ? `${kr.gearing_ratio}x` : 'N/A'} />
         <MetricCard
           label="NTA / Share"
-          value={bs.net_assets_per_share != null ? `RM${bs.net_assets_per_share.toFixed(4)}` : 'N/A'}
+          value={bs.net_assets_per_share != null ? `RM${(parseFloat(bs.net_assets_per_share) || 0).toFixed(4)}` : 'N/A'}
         />
       </div>
     </Card>
